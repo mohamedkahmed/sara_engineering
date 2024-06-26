@@ -1,0 +1,122 @@
+@import "../variables/Variables.scss";
+
+.single_about_us {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    background-image: url('/images/Pattern.svg');
+    background-position: center;
+    div {
+        width: 50%;
+    }
+    .about_img {
+        img {
+            width: 100%;
+        }
+    }
+    .about_content {
+        color: $blue_1;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        text-align: start;
+        padding: 0 80px;
+        p {
+            margin: 20px 0;
+            font-size: $font_16;
+            text-align: justify;
+        }
+        h2 {
+            font-weight: 600;
+        }
+    }
+    .about_down_icon {
+        position: absolute;
+        right: 9%;
+        bottom: 0;
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        svg {
+            font-size: $font_32;
+        }
+        .top {
+            color: $blue_1;
+        }
+        .down {
+            color: $green_1;
+        }
+    }
+}
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    .single_about_us {
+        flex-direction: column;
+        gap: 50px;
+        .about_img {
+            width: 100%;
+        }
+        .about_content {
+            width: 100%;
+            align-items: start;
+            padding: 0 20px;
+            p {
+                max-width: 100%;
+            }
+        }
+        .about_down_icon {
+            bottom: -4%;
+        }
+    }
+ }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .single_about_us {
+        flex-direction: column;
+        gap: 50px;
+        .about_img {
+            width: 100%;
+        }
+        .about_content {
+            width: 100%;
+            align-items: start;
+            padding: 0 20px;
+            p {
+                max-width: 100%;
+            }
+        }
+        .about_down_icon {
+            bottom: -4%;
+        }
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .single_about_us {
+        flex-direction: column;
+        gap: 50px;
+        .about_img {
+            width: 100%;
+        }
+        .about_content {
+            width: 100%;
+            align-items: start;
+            padding: 0 20px;
+            p {
+                max-width: 100%;
+            }
+        }
+        .about_down_icon {
+            bottom: -4%;
+        }
+    }
+ }
+

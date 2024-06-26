@@ -1,0 +1,129 @@
+@import "../variables/Variables.scss";
+
+.CeoMessage_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $padding_80;
+    overflow: hidden;
+    div {
+        width: 50%;
+    }
+    .CeoMessage_img {
+        img {
+            width: 100%;
+        }
+        .about_img_founder {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 85%;
+            svg {
+                font-size: $font_32;
+                color: $blue_1;
+            }
+            padding-top: 10px;
+            p {
+                font-size: $font_14;
+                color: $blue_1;
+            }
+        }
+    }
+    .CeoMessage_content {
+        color: $blue_1;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        text-align: start;
+        padding: 0 80px;
+        h2 {
+            margin-bottom: 10px;
+        }
+        p {
+            margin: 10px 0;
+            font-size: $font_16;
+            word-spacing: 5px;
+            text-align: justify;
+        }
+    }
+}
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    .CeoMessage_wrapper {
+        flex-direction: column;
+        gap: 50px;
+        div {
+            width: 100%;
+        }
+        .CeoMessage_content {
+            width: 100%;
+            align-items: start;
+            padding: 0 20px;
+            order: 2;
+            p {
+                max-width: 100%;
+            }
+        }
+        .CeoMessage_img {
+            order: 1;
+            .about_img_founder {
+                padding: 10px 0 0  15px;
+            }
+        }
+    }
+ }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .CeoMessage_wrapper {
+        flex-direction: column;
+        gap: 50px;
+        div {
+            width: 100%;
+        }
+        .CeoMessage_content {
+            width: 100%;
+            align-items: start;
+            padding: 0 20px;
+            order: 2;
+            p {
+                max-width: 100%;
+            }
+        }
+        .CeoMessage_img {
+            order: 1;
+            .about_img_founder {
+                padding: 10px 0 0  15px;
+            }
+        }
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .CeoMessage_wrapper {
+        flex-direction: column;
+        gap: 50px;
+        div {
+            width: 100%;
+        }
+        .CeoMessage_content {
+            width: 100%;
+            align-items: start;
+            padding: 0 20px;
+            order: 2;
+            p {
+                max-width: 100%;
+            }
+        }
+        .CeoMessage_img {
+            order: 1;
+            .about_img_founder {
+                padding: 10px 0 0  15px;
+            }
+        }
+    }
+ }

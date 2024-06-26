@@ -1,0 +1,142 @@
+@import "../../components/variables/Variables.scss";
+
+.our_Companies_wrapper {
+    padding: $padding_80;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    overflow: hidden;
+    .our_Companies_content {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        .image {
+            width: 48%;
+            img {
+                width: 100%;
+            }
+            .go_to_site {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                svg {
+                    font-size: $font_26;
+                }
+                .go {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    p {
+                        font-size: $font_14;
+                        color: $blue_1;
+                    }
+                    svg {
+                        font-size: $font_26;
+                    }
+                }
+            }
+        }
+        .content_text {
+            width: 52%;
+            padding: 0 80px;
+            color: $blue_1;
+            p {
+                margin: 15px 0;
+                font-size: $font_16;
+                line-height: 1.7;
+                margin-top: 30px;
+                text-align: justify;
+            }
+            .brand_images {
+                margin-top: 50px;
+                display: flex;
+                gap: 30px;
+                img {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+        }
+    }
+}
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    .our_Companies_wrapper {
+        overflow: hidden;
+        .our_Companies_content {
+            flex-direction: column;
+            gap: 50px;
+            .image {
+                width: 100%;
+                order: 2 !important;
+                .go_to_site {
+                    padding: 15px !important;
+                }
+            }
+            .content_text {
+                width: 100%;
+                padding: 0 20px;
+                order: 1 !important;
+                .brand_images {
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+ }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .our_Companies_wrapper {
+        overflow: hidden;
+        .our_Companies_content {
+            flex-direction: column;
+            gap: 50px;
+            .image {
+                width: 100%;
+                order: 2 !important;
+                .go_to_site {
+                    padding: 15px !important;
+                }
+            }
+            .content_text {
+                width: 100%;
+                padding: 0 20px;
+                order: 1 !important;
+                .brand_images {
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .our_Companies_wrapper {
+        overflow: hidden;
+        .our_Companies_content {
+            flex-direction: column;
+            gap: 50px;
+            .image {
+                width: 100%;
+                order: 2 !important;
+                .go_to_site {
+                    padding: 15px !important;
+                }
+            }
+            .content_text {
+                width: 100%;
+                padding: 0 20px;
+                order: 1 !important;
+                .brand_images {
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+ }

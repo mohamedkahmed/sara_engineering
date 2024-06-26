@@ -1,0 +1,133 @@
+.slider-container {
+  width: 85%;
+  order: 1;
+  .slick-slider {
+    .slick-arrow {
+      display: none !important;
+    }
+    &:first-child {
+      width: 100%;
+      .slick-list {
+        width: 100%;
+
+        .slick-track {
+          width: 100%;
+
+          .slick-slide {
+            width: 100%;
+
+            div {
+              width: 100%;
+              img {
+                width: 100% !important;
+                height: 605px !important;
+                object-fit: cover;
+              }
+              .single_video {
+                width: 100% !important;
+                height: 605px !important;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+      }
+    }
+    &:last-child {
+      margin-top: 5px;
+
+      width: 100%;
+      .slick-list {
+        width: 100%;
+
+        .slick-track {
+          width: 100%;
+
+          .slick-slide {
+            width: 100%;
+
+            div {
+              width: 100%;
+              height: 180px;
+              img {
+                height: 180px !important;
+                object-fit: cover;
+              }
+              .single_video {
+                height: 180px;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .slider-container {
+    width: 85%;
+    .slick-slider {
+      &:first-child {
+        width: 100%;
+        .slick-list {
+          width: 100%;
+
+          .slick-track {
+            width: 100%;
+
+            .slick-slide {
+              width: 100%;
+
+              div {
+                width: 100%;
+                
+                img {
+                  width: 100% !important;
+                  height: 450px !important;
+                  object-fit: cover;
+                }
+                .single_video {
+                  width: 100% !important;
+                  height: 450px !important;
+                  object-fit: cover;
+                }
+              }
+            }
+          }
+        }
+      }
+      &:last-child {
+        margin-top: 5px;
+
+        width: 100%;
+        .slick-list {
+          width: 100%;
+
+          .slick-track {
+            width: 100%;
+
+            .slick-slide {
+              width: 100%;
+
+              div {
+                width: 100%;
+                height: 150px !important;
+                img {
+                  height: 150px !important;
+                  object-fit: cover;
+                }
+                .single_video {
+                  height: 150px !important;
+                  object-fit: cover;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "../variables/Variables.scss";
+
+.down_icon {
+    padding: 20px;
+    svg {
+        font-size: $font_32;
+        color: $green_1;
+    }
+}
+
+/* .contact_down_icon {
+    padding-top: calc(20px + 129px);
+
+} */

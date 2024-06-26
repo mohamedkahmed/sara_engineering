@@ -1,0 +1,25 @@
+@import "../../components/variables/variables.scss";
+
+.privacy {
+    padding-bottom: 80px;
+    color: $blue_1;
+    ul {
+        list-style:circle;
+        padding-left: 30px !important;
+        li {
+            margin: 20px 0;
+            font-size: $font_14;
+        }
+    }
+
+    p {
+        margin: 5px 0;
+        font-size: $font_14;
+
+    }
+    h5 {
+        margin: 10px 0;
+        font-size: $font_18;
+
+    }
+}

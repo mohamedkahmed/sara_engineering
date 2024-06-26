@@ -1,0 +1,178 @@
+@import "../variables/Variables.scss";
+
+.choose_us {
+    padding: $padding_80;
+    overflow: hidden;
+    .choose_parent {
+        display: flex;
+        align-items: center;
+        .image {
+            width: 45%;
+            height: 100%;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .text {
+            width: 55%;
+            padding: 0 80px;
+            .top-text {
+                color: $blue_1;
+                h1 {
+                    text-transform: capitalize;
+                    margin-bottom: 20px;
+                }
+                p {
+                    line-height: 1.7;
+                    color: $blue_1;
+                    font-weight: 500;
+                    font-size: $font_16;
+                    text-align: justify;
+                }
+            }
+            .feats {
+                display: flex;
+                flex-wrap: wrap;
+                grid-gap: 25px;
+                margin-top: 60px;
+                position: relative;
+                .feat {
+                    width: 160px;
+                    height: 160px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    color: $white_2;
+                    background-image: url("/images/choose_background.svg");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    text-align: center;
+                    gap: 10px;
+                    padding: 10px;
+                    img {
+                        width: 46px;
+                        height: 42px;
+                    }
+                    h5 {
+                        font-size: $font_18;
+                    }
+                }
+                .arrow_down {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    font-size: $font_32;
+                    color: $green_1;
+                }
+            }
+        }
+    }
+}
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    .choose_us {
+        .choose_parent {
+            flex-direction: column;
+            gap: 50px;
+                    .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .text {
+            width: 100%;
+            padding: 0 20px;
+            .top-text {
+                color: $blue_1;
+                h1 {
+                    text-transform: capitalize;
+                    margin-bottom: 20px;
+                }
+                p {
+                    line-height: 1.7;
+                    color: $blue_1;
+                    font-size: $font_16;
+                }
+            }
+        }
+        }
+    }
+ }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .choose_us {
+        .choose_parent {
+            flex-direction: column;
+            gap: 50px;
+                    .image {
+            width: 100%;
+            object-fit: cover;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .text {
+            width: 100%;
+            padding: 0 20px;
+            .top-text {
+                color: $blue_1;
+                h1 {
+                    text-transform: capitalize;
+                    margin-bottom: 20px;
+                }
+                p {
+                    line-height: 1.7;
+                    color: $blue_1;
+                    font-size: $font_16;
+                }
+            }
+        }
+        }
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .choose_us {
+        .choose_parent {
+            flex-direction: column;
+            gap: 50px;
+                    .image {
+            width: 100%;
+            object-fit: cover;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .text {
+            width: 100%;
+            padding: 0 20px;
+            .top-text {
+                color: $blue_1;
+                h1 {
+                    text-transform: capitalize;
+                    margin-bottom: 20px;
+                }
+                p {
+                    line-height: 1.7;
+                    color: $blue_1;
+                    font-size: $font_16;
+                }
+            }
+        }
+        }
+    }
+ }
+

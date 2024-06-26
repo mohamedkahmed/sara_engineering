@@ -1,0 +1,227 @@
+@import "../../components/variables/variables.scss";
+
+
+
+.contact-wrapper {
+    padding-bottom: 80px;
+    overflow: hidden;
+    background-image: url('/images/Pattern.svg');
+        background-position: center;
+    .contact-title-text {
+        color: $blue_1;
+        text-transform: capitalize;
+        max-width: 90%;
+        p {
+            font-size: $font_14;
+            line-height: 1.7;
+            margin: 10px 0;
+            max-width: 90%;
+        }
+    }
+    .contact-us-links {
+        padding: 50px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+            a {
+                display: flex;
+                align-items: center;
+                .link-items-ch {
+                    gap: 10px;
+                }
+                 p{
+                    margin: 0;
+                 }
+                 svg {
+                    font-size: 20px;
+                 }
+            }
+            .link-items-ch {
+                color: white;
+                font-size: $font_14;
+                background-color: $blue_1;
+                gap: 15px;
+                width: 240px;
+                height: 65px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: $transition;
+                &:hover {
+                    background-color: $green_1;
+                    color: $blue_1;
+                    a {
+                        color: $blue_1;
+                    }
+                }
+                a {
+                    color: white;
+                }
+            }
+    }
+
+    /* form section */
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding-bottom: 0 !important;
+        .main-parent {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+            div {
+                display: flex;
+                align-items: start;
+                justify-content: center;
+                flex-direction: column;
+                gap: 10px;
+                text-transform: capitalize;
+                color: $blue_1;
+                width: 100%;
+                label {
+                    font-weight: 600;
+                    font-size: $font_14;
+                    margin-left: 10px;
+                    color: $blue_1;
+                }
+                input {
+                    width: 100%;
+                    padding: 12px 15px; 
+                    border: 1px solid $blue_1;
+                    background-color: transparent;
+                    font-size: $font_14;
+                    outline: none;
+                }
+            }
+            select {
+                width: 100%;
+                padding: 12px 15px; 
+                border: 1px solid $blue_1;
+                background-color: #f1f1f16c;
+                font-size: $font_14;
+                outline: none;
+            }
+        }
+        .message {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-transform: capitalize;
+            textarea {
+                width: 100%;
+                padding: 12px 15px; 
+                border: 1px solid $blue_1;
+                background-color: transparent;
+                font-size: $font_14;
+                outline: none;
+                height: 120px !important;
+            }
+        }
+        .send-dm {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: $font_14;
+            color: wi;
+            a {
+                color: $blue_1;
+                text-decoration: underline !important;
+            }
+            .check-input {
+                margin-right: 8px;
+            }
+            .submit-input {
+                padding: 10px 20px;
+                outline: none;
+                background-color: $green_1;
+                color: white;
+                border: none;
+                text-transform: capitalize;
+                font-size: $font_12;
+                font-weight: 600;
+                transition: $transition;
+                &:hover {
+                    background-color: $blue_1;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    .contact-wrapper {
+        .contact-title-text {
+            max-width: 100%;
+        }
+        .contact-us-links {
+            flex-direction: column;
+            gap: 15px;
+        }
+        .form-section {
+            .main-parent {
+                flex-direction: column;
+            }
+            .send-dm {
+                flex-direction: column;
+                gap: 15px;
+                align-items: start;
+            }
+        }
+    }
+ }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .contact-wrapper {
+        .contact-title-text {
+            max-width: 100%;
+        }
+        .contact-us-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        .form-section {
+            .main-parent {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            .send-dm {
+                flex-direction: column;
+                gap: 15px;
+                align-items: start;
+            }
+        }
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .contact-wrapper {
+        .contact-title-text {
+            max-width: 100%;
+        }
+        .contact-us-links {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+    }
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+    
+ }

@@ -1,0 +1,139 @@
+@import "../variables/Variables.scss";
+
+.footer-wrapper {
+    background-color: $blue_1;
+    padding-top: 80px;
+    overflow: hidden;
+    .footer_content {
+        display: flex;
+        gap: 50px;
+        .top_text {
+            border-bottom: 1px solid #5e5d5d70;
+            padding-bottom: 15px;
+            p {
+                color: rgb(196, 195, 195);
+                font-size: $font_14;
+                line-height: 1.7;
+                margin: 0;
+            }
+        }
+        .footer_links {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            padding: 50px 0;
+            .link {
+                h5 {
+                    color: $white_1;
+                    font-size: $font_14;
+                }
+                ul {
+                    margin-top: 15px;
+                    li {
+                        a {
+                            color: rgb(196, 195, 195);
+                            font-size: $font_12;
+                            transition: $transition;
+                            text-transform: capitalize;
+                            &:hover {
+                                color: $green_1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .down_reserves {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 40px;
+            .right {
+                p {
+                    font-size: $font_14;
+                    color: rgb(219, 219, 219);
+                }
+            }
+            .social_media {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                a {
+                    color: $white_1;
+                    padding: 7px;
+                    border-radius: 5px;
+                    svg {
+                        font-size: $font_22;
+                        transition: $transition;
+                        &:hover {
+                            opacity: 0.8;
+                            color: $green_1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    .footer-wrapper {
+        .footer_content {
+            flex-direction: column;
+            .logo {
+                text-align: center;
+            }
+            .content_text {
+                .footer_links {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 50px;
+                }
+            }
+        }
+    }
+ }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .footer-wrapper {
+        .footer_content {
+            flex-direction: column;
+            .logo {
+                text-align: center;
+            }
+            .content_text {
+                .footer_links {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 50px;
+                }
+            }
+        }
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .footer-wrapper {
+        .footer_content {
+            flex-direction: column;
+            .logo {
+                text-align: center;
+            }
+            .content_text {
+                .footer_links {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 50px;
+                }
+            }
+        }
+    }
+ }
+

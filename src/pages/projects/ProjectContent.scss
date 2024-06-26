@@ -1,0 +1,198 @@
+@import "../../components/variables/Variables.scss";
+
+.project_content {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 80px;
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+        .images {
+            .side_img_di {
+                order: 2;
+            }
+        }
+    }
+    .images {
+            width: 50%;
+            display: flex;
+            .side_img_di {
+                background-image: url('/images/Rectangle\ 848.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 15%;
+            }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            .sub_img {
+                display: grid;
+                grid-template-columns: repeat(3, 0fr);
+                justify-content: space-between;
+                margin-top: 6px;
+                img {
+                    width: 190px;
+                    height: 160px;
+                    object-fit: cover;
+                    cursor: pointer ;
+                    transition: $transition;
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+    }
+
+    .content {
+        width: 50%;
+        padding: 0 60px;
+        color: $blue_1;
+        h2 {
+            text-transform: capitalize;
+            font-size: $font_40;
+            max-width: 70%;
+        }
+        h5 {
+            font-size: $font_14;
+            font-weight: 600;
+            margin: 35px 0 15px;
+        }
+        p {
+            font-size: $font_16;
+            line-height: 1.7;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 10;
+            overflow: hidden;
+            text-align: justify;
+        }
+        .about_project {
+            margin-top: 30px;
+            ul {
+                li {
+                    display: flex;
+                    margin: 5px 0;
+                    div {
+                        width: 40%;
+                    }
+                    p {
+                        text-transform: capitalize;
+                        font-size: $font_14;
+                    }
+                    span {
+                        font-weight: 600;
+                        font-size: $font_14;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    .project_content {
+        flex-direction: column;
+        gap: 50px;
+        &:nth-child(even) {
+            flex-direction: column
+        }
+        .images {
+            width: 100%;
+
+            .main_image {
+                width: 100%;
+            }
+            .sub_img {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: start;
+                gap: 20px;
+            }
+        }
+        .content {
+            width: 100%;
+            padding: 0 20px;
+            h2 {
+                max-width: 100%;
+            }
+            .about_project {
+                ul {
+                    li {
+                        div {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+ }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .project_content {
+        flex-direction: column;
+        gap: 50px;
+        &:nth-child(even) {
+            flex-direction: column
+        }
+        .images {
+            width: 100%;
+            .main_image {
+                width: 100%;
+            }
+        }
+        .content {
+            width: 100%;
+            padding: 0 20px;
+            h2 {
+                max-width: 100%;
+            }
+            .about_project {
+                ul {
+                    li {
+                        div {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .project_content {
+        flex-direction: column;
+        gap: 50px;
+        .images {
+            width: 100%;
+            .main_image {
+                width: 100%;
+            }
+        }
+        .content {
+            width: 100%;
+            padding: 0 20px;
+            h2 {
+                max-width: 100%;
+            }
+            .about_project {
+                ul {
+                    li {
+                        div {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+ }
+

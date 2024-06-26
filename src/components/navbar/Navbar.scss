@@ -1,0 +1,199 @@
+@import "../variables/Variables.scss";
+
+.navbar {
+    padding: 3rem 0 !important;
+    background-color: transparent;
+    color: white !important;
+    text-transform: capitalize;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    transition: $transition;
+    .navbar-collapse {
+        .navbar-nav {
+            .nav-item {
+                padding: 1rem;
+                .nav-link {
+                    padding: .5rem 0 !important;
+                    color: $white_2;
+                    transition: $transition;
+                    font-size: $font_14;
+                    position: relative;
+                    &::before {
+                        content: "";
+                        background-color: $white_1;
+                        width: 20px;
+                        height: 2px;
+                        bottom: 0;
+                        left: 0;
+                        position: absolute;
+                        transition: $transition;
+                    }
+                    &:hover {
+                        color: $green_1;
+                        &::before {
+                            width: 100%;
+                        }
+                    }
+                }
+                .active {
+                    color: $green_1 !important;
+                }
+                .dropdown-menu {
+                    background-color: $blue_1;
+                    box-shadow: 1px 3px 19px 0px #0e0e0e2f;
+                    padding: 10px;
+                    .dropdown-item {
+                        font-size: $font_14;
+                        color: white;
+                        padding: 0.5rem;
+                        transition: $transition;
+                        &:hover {
+                            color: $green_1;
+                            background-color: transparent;
+                        }
+                    }
+                    .active {
+                        background: none !important
+                    }
+                }
+            }
+        }
+        .nav-item-single-page {
+            .nav-item {
+                .nav-link {
+                    color: $blue_1 !important;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .navbar-toggler {
+        background-color: white;
+        color: $blue_1;
+    }
+}
+
+.show_background {
+    background-color: $blue_1 !important;
+    transition: $transition;
+    padding: 1rem !important;
+    .navbar-brand {
+        img {
+            width: 80%;
+        }
+    }
+}
+
+/* .privacy_navbar {
+    background-color: $blue_1;
+    padding: 1.5rem !important;
+}
+
+.contact_navbar {
+    background-color: $blue_1;
+    padding: 1.5rem !important;
+} */
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    .navbar {
+        padding: 2rem 1rem !important;
+        .navbar-brand {
+            img {
+                width: 90%;
+            }
+        }
+        .navbar-collapse {
+            background-color: $blue_1;
+            padding: 20px ;
+            border-radius: 8px;
+                .nav-item {
+                    .nav-link {
+                        color: white !important;
+                    }
+            }
+        }
+    }
+    .show_background {
+        background-color: $blue_1 !important;
+        transition: $transition;
+        padding: 1rem !important;
+        .navbar-brand {
+            img {
+                width: 80%;
+            }
+        }
+    }
+   }
+   
+   // Small devices (landscape phones, 576px and up)
+   @media (min-width: 576px) and (max-width: 767.98px) { 
+    .navbar {
+        padding: 2rem 1rem !important;
+        .navbar-brand {
+            img {
+                width: 100%;
+            }
+        }
+        .navbar-collapse {
+            background-color: $blue_1;
+            padding: 20px ;
+            border-radius: 8px;
+                .nav-item {
+                    .nav-link {
+                        color: white !important;
+                    }
+            }
+        }
+    }
+    .show_background {
+        background-color: $blue_1 !important;
+        transition: $transition;
+        padding: 1rem !important;
+        .navbar-brand {
+            img {
+                width: 80%;
+            }
+        }
+    }
+   }
+   
+   // Medium devices (tablets, 768px and up)
+   @media (min-width: 768px) and (max-width: 991.98px) { 
+    .navbar {
+        padding: 2rem 1rem !important;
+        .navbar-brand {
+            img {
+                width: 100%;
+            }
+        }
+        .navbar-collapse {
+            background-color: $blue_1;
+            padding: 20px ;
+            border-radius: 8px;
+                .nav-item {
+                    .nav-link {
+                        color: white !important;
+                    }
+            }
+        }
+    }
+    .show_background {
+        background-color: $blue_1 !important;
+        transition: $transition;
+        padding: 1rem !important;
+        .navbar-brand {
+            img {
+                width: 80%;
+            }
+        }
+    }
+   }
+   
+  

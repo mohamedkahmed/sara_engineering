@@ -1,0 +1,346 @@
+@import "../variables/Variables.scss";
+.header {
+  height: 964px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-image: url('/images/Pattern.svg');
+  .main-header {
+/*     background-image: linear-gradient(
+        rgba(0, 0, 0, 0.349),
+        rgba(0, 0, 0, 0.493)
+      ),
+      url("/images/home_background.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(0, 0, 148);
+    position: relative;
+    .background_cover_src {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+      .single_video {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+      }
+    }
+    .down-icon {
+      position: absolute;
+      bottom: 5%;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      svg {
+        font-size: $font_36;
+      }
+      .top-icon {
+        color: $blue_1;
+      }
+      .down2-icon {
+        color: $green_1;
+      }
+    }
+    .slick-slider {
+      .slick-next:before,
+      .slick-prev:before {
+          display: none;
+      }
+      height: 100%;
+      .slick-list {
+          height: 100%;
+          .slick-track {
+              height: 100%;
+              .slick-slide {
+                  height: 100%;
+              }
+              .header-content {
+                display: flex !important;
+                align-items: end;
+                justify-content: space-between;
+                height: 964px;
+                width: 100%;
+                .header-text {
+                  display: flex;
+                  align-items: center;
+                  position: relative;
+                  width: 50%;
+                  height: 100%;
+                  color: $white_2;
+                  .t-x {
+                    margin-bottom: 60px;
+                    h1 {
+                      margin-bottom: 10px;
+                    }
+                    p {
+                      font-size: $font_16;
+                      max-width: 75%;
+                    }
+                  }
+
+                }
+                .header-image {
+                  width: 50%;
+                  img {
+                    height: 786px;
+                    width: 100%;
+                  }
+                  .single_video {
+                    width: 100%;
+                    height: 786px !important;
+                    object-fit: cover;
+                  }
+                }
+              }
+          }
+      }
+      .slick-dots {
+          bottom: 20px !important;
+          li {
+              button {
+                  &::before {
+                      color: $green_1;
+                      font-size: 8px;
+                  }
+              }
+          }
+      }
+  }
+
+
+  }
+}
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+  .header {
+    overflow: auto;
+    height: 100vh;
+    .main-header {
+      height: 50%;
+      .down-icon {
+        bottom: -20%;
+        z-index: 999;
+      }
+      .slick-slider {
+        .slick-next:before,
+        .slick-prev:before {
+            display: none;
+        }
+        height: 100%;
+        .slick-list {
+            height: 100%;
+            .slick-track {
+                height: 100%;
+                .slick-slide {
+                    height: 100%;
+                }
+                .header-content {
+                  display: flex !important;
+                  align-items: center;
+                  justify-content: center;
+                  flex-direction: column;
+                  width: 100%;
+                  height: 100vh;
+                  .header-text {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    width: 100%;
+                    height: 50%;
+                    color: $white_2;
+                    .t-x {
+                      padding-top: 60px;
+                      h1 {
+                        margin-bottom: 15px;
+                      }
+                      p {
+                        font-size: $font_16;
+                        max-width: 100%;
+                      }
+                    }
+  
+                  }
+                  .header-image {
+                    width: 100%;
+                    height: 50%;
+                    img {
+                      transform: translateY(-20%);
+                      width: 100%;
+                      height: 100%;
+                    }
+                    .single_video {
+                      transform: translateY(-20%);
+                      width: 100%;
+                      height: 100%;
+                    }
+                  }
+                }
+            }
+        }
+    }
+  
+  
+    }
+  }
+ }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+  .header {
+    overflow: auto;
+    height: 100vh;
+    .main-header {
+      height: 50%;
+      .down-icon {
+        bottom: -20%;
+        z-index: 999;
+      }
+      .slick-slider {
+        .slick-next:before,
+        .slick-prev:before {
+            display: none;
+        }
+        height: 100%;
+        .slick-list {
+            height: 100%;
+            .slick-track {
+                height: 100%;
+                .slick-slide {
+                    height: 100%;
+                }
+                .header-content {
+                  display: flex !important;
+                  align-items: center;
+                  justify-content: center;
+                  flex-direction: column;
+                  width: 100%;
+                  height: 100vh;
+                  .header-text {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    width: 100%;
+                    height: 50%;
+                    color: $white_2;
+                    .t-x {
+                      padding-top: 60px;
+                      h1 {
+                        margin-bottom: 15px;
+                      }
+                      p {
+                        font-size: $font_16;
+                        max-width: 100%;
+                      }
+                    }
+  
+                  }
+                  .header-image {
+                    width: 100%;
+                    height: 50%;
+                    img {
+                      transform: translateY(-20%);
+                      width: 100%;
+                      height: 100%;
+                    }
+                    .single_video {
+                      transform: translateY(-20%);
+                      width: 100%;
+                      height: 100%;
+                    }
+                  }
+                }
+            }
+        }
+    }
+  
+  
+    }
+  }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { 
+  .header {
+    overflow: auto;
+    height: 100vh;
+    .main-header {
+      height: 50%;
+      .down-icon {
+        bottom: -20%;
+        z-index: 999;
+      }
+      .slick-slider {
+        .slick-next:before,
+        .slick-prev:before {
+            display: none;
+        }
+        height: 100%;
+        .slick-list {
+            height: 100%;
+            .slick-track {
+                height: 100%;
+                .slick-slide {
+                    height: 100%;
+                }
+                .header-content {
+                  display: flex !important;
+                  align-items: center;
+                  justify-content: center;
+                  flex-direction: column;
+                  width: 100%;
+                  height: 100vh;
+                  .header-text {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    width: 100%;
+                    height: 50%;
+                    color: $white_2;
+                    .t-x {
+                      padding-top: 60px;
+                      h1 {
+                        margin-bottom: 15px;
+                      }
+                      p {
+                        font-size: $font_16;
+                        max-width: 100%;
+                      }
+                    }
+  
+                  }
+                  .header-image {
+                    width: 100%;
+                    height: 50%;
+                    img {
+                      transform: translateY(-20%);
+                      width: 100%;
+                      height: 100%;
+                    }
+                    .single_video {
+                      transform: translateY(-20%);
+                      width: 100%;
+                      height: 100%;
+                    }
+                  }
+                }
+            }
+        }
+    }
+  
+  
+    }
+  }
+ }
+
