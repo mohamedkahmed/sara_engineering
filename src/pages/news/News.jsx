@@ -2,6 +2,7 @@ import React from 'react'
 import { ArrowDownIcon, BreadCrumb, Loading } from '../../components'
 import { MdKeyboardArrowDown, MdArrowRightAlt } from "react-icons/md";
 import {useFetchOurNews} from "../../components/featchData/FeatchData";
+import ReactPlayer from 'react-player'
 import "./News.scss";
 import { Link } from 'react-router-dom';
 /* import moment from 'moment'; */
@@ -20,7 +21,7 @@ const News = () => {
           <ArrowDownIcon alignItems="right" />
           <section className="news_wrapper">
             {ourNews.map((items) => {
-              const {id,image, para1, para2, title, date, url}  = items;
+              const {id,image, para1, para2, title, date, urlVid, youWantToAddVideo}  = items;
               return (
                 <div   className="news_content" key={id}>
                     <div className="content_text">
@@ -36,15 +37,16 @@ const News = () => {
                     </div>
                     <div className="image">
                     <div className="u-img">
-                    {url ? (
+                    {youWantToAddVideo ? (
                       <video className="single_video" height="786px" autoPlay muted loop>
-                        <source src={url} type="video/mp4" />
+                        <source src={urlVid} type="video/mp4" />
                       </video>
                     ) : (
                         <img src={image} alt={title} />
                     )}
                         </div>
                         <div className="side_img_di">
+
                     </div>
                     </div>
                     <div className="arrow_icon">

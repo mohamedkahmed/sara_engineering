@@ -55,7 +55,7 @@ const SingleNews = () => {
           }
         ]
       };
-      const {image, para1, para2, title, date, subImg, subtitle, url
+      const {image, para1, para2, title, date, subImg, subtitle, urlVid,youWantToAddVideo
       }  = getNew;
       function SampleNextArrow(props) {
         const { className, style, onClick } = props;
@@ -91,9 +91,9 @@ const SingleNews = () => {
                         <div className="side_img_di">
                     </div>
                     <div className="u-img">
-                    {url ? (
+                    {youWantToAddVideo ? (
                       <video className="single_video" height="786px" autoPlay muted loop>
-                        <source src={url} type="video/mp4" />
+                        <source src={urlVid} type="video/mp4" />
                       </video>
                     ) : (
                         <img src={image} alt={title} />

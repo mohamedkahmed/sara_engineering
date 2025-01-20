@@ -9,19 +9,56 @@
     .our_Companies_content {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         width: 100%;
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+            .go_to_site {
+                padding-left: 15% !important;
+                padding-right: 0 !important;
+
+            }
+
+            .image {
+                .dis_img_side {
+                    .side_img {
+                        order: 1 !important;
+                    }
+                    img {
+                        order: 2 !important;
+                    }
+                }
+            }
+        }
         .image {
             width: 48%;
-            img {
-                width: 100%;
+            .dis_img_side {
+                display: flex;
+                .side_img {
+                    width: 15%;
+                    height: auto;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                img {
+                    width: 85%;
+                    height: auto;
+                    object-fit: cover;
+                }
             }
             .go_to_site {
                 width: 100%;
+                padding-right: 15%;
+                padding-left: 0;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                padding-top: 50px;
                 svg {
-                    font-size: $font_26;
+                    font-size: 26px;
                 }
                 .go {
                     display: flex;
@@ -32,7 +69,7 @@
                         color: $blue_1;
                     }
                     svg {
-                        font-size: $font_26;
+                        font-size: 26px;
                     }
                 }
             }
@@ -46,11 +83,16 @@
                 font-size: $font_16;
                 line-height: 1.7;
                 margin-top: 30px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 6;
+                overflow: hidden;
                 text-align: justify;
             }
             .brand_images {
                 margin-top: 50px;
                 display: flex;
+                flex-wrap: wrap;
                 gap: 30px;
                 img {
                     width: 150px;
@@ -70,6 +112,24 @@
         .our_Companies_content {
             flex-direction: column;
             gap: 50px;
+            &:nth-child(even) {
+                flex-direction: column;
+                .image {
+                    width: 100%;
+                    order: 2 !important;
+                    .go_to_site {
+                        padding: 15px !important;
+                    }
+                }
+                .content_text {
+                    width: 100%;
+                    padding: 0 20px;
+                    order: 1 !important;
+                    .brand_images {
+                        flex-wrap: wrap;
+                    }
+                }
+            }
             .image {
                 width: 100%;
                 order: 2 !important;
@@ -96,6 +156,24 @@
         .our_Companies_content {
             flex-direction: column;
             gap: 50px;
+            &:nth-child(even) {
+                flex-direction: column;
+                .image {
+                    width: 100%;
+                    order: 2 !important;
+                    .go_to_site {
+                        padding: 15px !important;
+                    }
+                }
+                .content_text {
+                    width: 100%;
+                    padding: 0 20px;
+                    order: 1 !important;
+                    .brand_images {
+                        flex-wrap: wrap;
+                    }
+                }
+            }
             .image {
                 width: 100%;
                 order: 2 !important;
@@ -122,6 +200,24 @@
         .our_Companies_content {
             flex-direction: column;
             gap: 50px;
+            &:nth-child(even) {
+                flex-direction: column;
+                .image {
+                    width: 100%;
+                    order: 2 !important;
+                    .go_to_site {
+                        padding: 15px !important;
+                    }
+                }
+                .content_text {
+                    width: 100%;
+                    padding: 0 20px;
+                    order: 1 !important;
+                    .brand_images {
+                        flex-wrap: wrap;
+                    }
+                }
+            }
             .image {
                 width: 100%;
                 order: 2 !important;

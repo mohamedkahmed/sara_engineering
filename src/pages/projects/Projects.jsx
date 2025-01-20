@@ -111,14 +111,14 @@ const Projects = () => {
                 return product;
               })
               .map((item) => {
-                const {url} = item
+                const {urlVid, youWantToAddVideo} = item
                 if (selectedSubCategoryId) return (
                   <section key={item.id} className="project_content">
                   <div className="images">
                     <div className="side_img_di">
                     </div>
 
-                    <AsNavFor slides={item?.subImg || []} url={url}  />
+                    <AsNavFor slides={item?.subImg || []} videos={urlVid} youWantToAddVideo={youWantToAddVideo}  />
                   </div>
                   <div className="content">
                     <h2>{item?.title}</h2>

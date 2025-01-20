@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "./AsNavFor.scss";
-function AsNavFor({ slides, url }) {
+function AsNavFor({ slides, videos, youWantToAddVideo }) {
   const [nav1, setNav1] = useState(null);
   const [nav2, setNav2] = useState(null);
   let sliderRef1 = useRef(null);
@@ -18,8 +18,8 @@ function AsNavFor({ slides, url }) {
       <Slider asNavFor={nav2} ref={(slider) => (sliderRef1 = slider)}>
         {slides?.length > 1 &&
           slides?.map((img, index) => <img src={img} key={`item-#${index}`} />)}
-        {url?.length > 0 &&
-          url?.map((video, index) => (
+        {videos?.length > 0 &&
+          videos?.map((video, index) => (
             <video
               key={`item-#${index}`}
               className="single_video"
@@ -41,8 +41,8 @@ function AsNavFor({ slides, url }) {
         {slides?.length > 1 &&
           slides?.map((img, index) => <img src={img} key={`item-#${index}`} />)}
 
-        {url?.length > 0 &&
-          url?.map((video, index) => (
+        {videos?.length > 0 &&
+          videos?.map((video, index) => (
             <video
               key={`item-#${index}`}
               className="single_video"

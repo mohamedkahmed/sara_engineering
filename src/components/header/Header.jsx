@@ -29,10 +29,10 @@ const Header = () => {
       <div className="main-header">
         <div className="background_cover_src">
           
-          {homeBackg[0]?.videoLink ? (
-                      <video className="single_video"  autoPlay muted loop>
-                        <source src={homeBackg[0]?.videoLink} type="video/mp4" />
-                      </video>
+          {homeBackg[0]?.youWantToAddVideo ? (
+                      <video className="single_video" height="786px" autoPlay muted loop>
+                      <source src={homeBackg[0]?.videoLink} type="video/mp4" />
+                    </video>
                     ) : (
                       <img src={homeBackg[0]?.image} alt="background" />
                     )}

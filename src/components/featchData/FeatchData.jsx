@@ -480,14 +480,15 @@ export const useFetchOurCompanies = () => {
     try {
       const response = await ourCompaniesPage.getEntries({ content_type: "ourCompanies" });
       const ourCompanies = response.items.map((item) => {
-        const { img, logo, para1, para2, brandImg, right, arrowColor, idTitle } = item.fields;
+        const { img, logo, para1, para2, brandImg, right, arrowColor, idTitle, url, sideImg } = item.fields;
         const id = item.sys.id;
         const image = checkURLProtocal(img?.fields?.file?.url);
         const logoImg = checkURLProtocal(logo?.fields?.file?.url);
+        const sideBarImg = checkURLProtocal(sideImg?.fields?.file?.url);
         const brandImage = brandImg.map((ele) => {
           return checkURLProtocal(ele.fields?.file?.url);
         });
-        return { id, image, para1, para2, brandImage, right, logoImg, arrowColor, idTitle };
+        return { id, image, para1, para2, brandImage, right, logoImg, arrowColor, idTitle, url, sideBarImg };
       });
       setOurCompanies(ourCompanies);
       setLoading(false);
@@ -518,15 +519,16 @@ export const useFetchOurNews = () => {
     try {
       const response = await ourNewsPage.getEntries({ content_type: "news" });
       const news = response.items.map((item) => {
-        const { img, para1, para2, title, subImages, subtitle,date, url
+        const { img, para1, para2, title, subImages, subtitle,date, url, youWantToAddVideo
         } = item.fields;
         const id = item.sys.id;
         /* const date = item.sys.createdAt; */
         const image = checkURLProtocal(img?.fields?.file?.url);
+        const urlVid = checkURLProtocal(url?.fields?.file?.url);
         const subImg = subImages.map((ele) => {
           return checkURLProtocal(ele.fields?.file?.url);
         });
-        return { id, image, para1, para2, title, subImg, date, subtitle, url
+        return { id, image, para1, para2, title, subImg, date, subtitle, urlVid, youWantToAddVideo
         };
       });
       setOurNews(news);
@@ -677,9 +679,12 @@ export const useFetchProjects = () => {
       const response = await projectsPage.getEntries({ content_type: "mainProject" });
 
       const result = response.items.map((item) => {
-        const { title, description, subtitle, client, consultant, mainContractor, mepContractor, providedSystem, status, projectYear, images, url } =
+        const { title, description, subtitle, client, consultant, mainContractor, mepContractor, providedSystem, status, projectYear, images, url, youWantToAddVideo } =
           item.fields;
           const subImg = images?.map((ele) => {
+            return checkURLProtocal(ele.fields?.file?.url);
+          });
+          const urlVid = url?.map((ele) => {
             return checkURLProtocal(ele.fields?.file?.url);
           });
           
@@ -697,7 +702,8 @@ export const useFetchProjects = () => {
           subImg,
           id: item.sys.id,
           createdAt: item.metadata?.createdAt,
-          url,
+          urlVid,
+          youWantToAddVideo
         };
       });
 
@@ -731,10 +737,11 @@ export const useFetchHomeBackground = () => {
     try {
       const response = await homeBackground.getEntries({ content_type: "homeBackgroundCover" });
       const homeBackgroundCover = response.items.map((item) => {
-        const { img, videoLink } = item.fields;
+        const { img, backgroundVideo,youWantToAddVideo } = item.fields;
         const id = item.sys.id;
         const image = checkURLProtocal(img?.fields?.file?.url);
-        return { id, image, videoLink};
+        const videoLink = checkURLProtocal(backgroundVideo?.fields?.file?.url);
+        return { id, image, videoLink,youWantToAddVideo};
       });
       setHomeBackground(homeBackgroundCover);
       setLoading(false);
