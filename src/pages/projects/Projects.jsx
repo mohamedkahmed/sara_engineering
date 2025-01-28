@@ -6,6 +6,7 @@ import { useFetchCategoriesPage } from "../../components/featchData/FeatchData";
 import {AsNavFor} from "../../components";
 import "./ProjectContent.scss";
 import "./Projects.scss";
+import { Link } from "react-router-dom";
 const Projects = () => {
   const { loading, categories } = useFetchCategoriesPage();
   const [show, setShow] = useState(false);
@@ -113,7 +114,7 @@ const Projects = () => {
               .map((item) => {
                 const {urlVid, youWantToAddVideo} = item
                 if (selectedSubCategoryId) return (
-                  <section key={item.id} className="project_content">
+                  <section key={item.id} className="project_content" id={`${item.id}`}>
                   <div className="images">
                     <div className="side_img_di">
                     </div>
@@ -182,7 +183,7 @@ const Projects = () => {
                 </section>
                 )
                 return (
-                  <div className="parent_card" key={item.id}>
+                  <div className="parent_card" key={item.id} >
                     <article className="card">
                       <div className="temporary_image">
                         <img
@@ -193,7 +194,7 @@ const Projects = () => {
                           title={item.title}
                         />
                       </div>
-                      <div
+                      <a
                         className="card_content"
                         onClick={() => {
                           setSelectedCategoryId(item.categoryId);
@@ -208,12 +209,13 @@ const Projects = () => {
                             ? `/categories/${item.categoryId}/${item.subCategoryId}`
                             : `/categories/${item.categoryId}`
                         } */
+                       href={`#${item.id}`}
                       >
                         <span className="card_title">{item.title}</span>
                         <span className="link_to">
                           <MdKeyboardArrowDown />
                         </span>
-                      </div>
+                      </a>
                     </article>
                   </div>
                 );
